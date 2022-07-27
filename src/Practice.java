@@ -3,38 +3,38 @@ import java.util.Scanner;
 public class Practice {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
+		Employee em = new Employee();
+		
 		System.out.print("사원번호 : ");
-		int empno = sc.nextInt();
+		em.empno = sc.nextInt();
+		sc.nextLine();  //enter 날리자.
 		
 		System.out.print("사원이름 : ");
-		String ename = sc.nextLine();
-		
-		sc.nextLine();
+		em.ename = sc.nextLine();
 		
 		System.out.print("사원출생년도 : ");
-		int birthyear = sc.nextInt();
+		em.birthYear = sc.nextInt();
 		
 		System.out.print("사원월급 : ");
-		int salary = sc.nextInt();
-		
-		System.out.print("사원이메일 : ");
-		String email = sc.nextLine();
-		
+		em.salary = sc.nextInt();
 		sc.nextLine();
 		
+		System.out.print("사원이메일 : ");
+		em.email = sc.nextLine();
+		
 		System.out.print("사원전화번호 : ");
-		int tel = sc.nextInt();
+		em.tel = sc.nextLine();
 		
 		System.out.print("정규직여부 : ");
-		boolean flag = sc.nextBoolean();
-
-		System.out.printf("사원번호 : %d\n", empno);
-		System.out.printf("사원이름 : %c\n", ename);
-		System.out.printf("사원출생년도 : %d\n", 2022 - birthyear);
-		System.out.printf("사원월급 : %d\n", salary);
-		System.out.printf("사원이메일 : %d\n", email);
-		System.out.printf("사원전화번호 : %d\n", tel);
-		System.out.printf("정규직여부  : %b\n", flag);
+		em.flag = sc.nextBoolean();
+		
+		System.out.println("<<사원정보>>");
+		System.out.println("사원번호 : " + em.empno);
+	    System.out.println("사원이름 : " + em.ename);
+	    System.out.println("사원나이 : " + (2022 - em.birthYear + 1));
+	    System.out.println("사원월급 : " + em.salary + "만원");
+	    System.out.println("사원이메일 : " + em.email);
+	    System.out.println("사원전화번호 : " + em.tel);
+	    System.out.println("정규직 : " + em.flag);
 	}
 }
